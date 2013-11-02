@@ -133,7 +133,7 @@ int main(int argc, char **argv)
       if (strncmp(argv[i], "-y", strlen("-y")) == 0)
         continue;
       else
-        rename_file(argv[i], do_not_ask);
+        rename_file(argv[i], !do_not_ask);
     
     return 0;
 }
