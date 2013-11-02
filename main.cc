@@ -7,6 +7,7 @@
 #include <cctype>
 #include <cstring>
 #include <unistd.h>
+#include <libgen.h>
 #include <poppler/cpp/poppler-document.h>
 #include <poppler/cpp/poppler-page.h>
 using std::cout;
@@ -88,6 +89,13 @@ static void rename_file(const char *fname, bool ask)
     char choice;
     string new_name = pdf_to_name(fname);
     bool do_rename = false;
+
+    // Get file path
+    char *path_and_file = strdup(fname);
+    string path(dirname(path_and_file));
+    free(path_and_file);
+    if (path.length() > 1)
+      new_name = path + '/' + new_name;
 
     // Ask the user if they want to rename the file
     if (ask)
