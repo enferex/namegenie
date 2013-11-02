@@ -100,8 +100,8 @@ static void rename_file(const char *fname, bool ask)
     // Ask the user if they want to rename the file
     if (ask)
     {
-        cout << "Rename " << fname << " to " << new_name << " ? [y/N]";
-        cin >> choice;
+        cout << "Rename " << fname << " to '" << new_name << "' [y/N]?";
+        cin.get(choice);
         if (choice == 'y' || choice == 'Y')
             do_rename = true;
     }
