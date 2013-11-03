@@ -88,6 +88,14 @@ static void rename_file(const char *fname, bool ask)
 {
     char choice;
     string new_name = pdf_to_name(fname);
+
+    // Error if the name is empty
+    if (new_name.compare(".pdf") == 0)
+    {
+        cerr << "Could not find a good name for " 
+             << fname << ", will not rename." << endl;
+        return;
+    }
     bool do_rename = false;
 
     // Get file path
