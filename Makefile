@@ -1,4 +1,4 @@
-APP=renamer
+APP=pdfrenamer
 CXXFLAGS=-g3 -O0 -lpoppler-cpp -Wall -pedantic
 
 all: $(APP)
