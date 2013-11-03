@@ -1,4 +1,4 @@
-APP=pdfrenamer
+APP=namegenie
 CXXFLAGS=-g3 -O0 -lpoppler-cpp -Wall -pedantic
 
 all: $(APP)

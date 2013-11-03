@@ -1,14 +1,14 @@
 ////////////////////////////////////////////////////////////////////////////////
-// pdfrenamer - Rename PDFs to the first line in the pdf (presumably the title)
+// namegenie - Rename PDFs to the first line in the pdf (presumably the title)
 //
 // Copyright (C) 2013, Matt Davis (enferex) <mattdavis9@gmail.com>
 //
-// pdfrenamer is free software: you can redistribute it and/or modify it under
+// namegenie is free software: you can redistribute it and/or modify it under
 // the terms of the GNU General Public License as published by the Free Software
 // Foundation, either version 3 of the License, or (at your option) any later
 // version.
 // 
-// pdfrenamer is distributed in the hope that it will be useful, but WITHOUT
+// namegenie is distributed in the hope that it will be useful, but WITHOUT
 // ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
 // FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
 // details.
@@ -42,7 +42,7 @@ static const int ver_minor = 1;
 
 static void usage(const char *execname)
 {
-    cout << "pdfrenamer v" << ver_major << "." << ver_minor << endl;
+    cout << "namegenie v" << ver_major << "." << ver_minor << endl;
     cout << "Usage: " << execname << " [file.pdf ...] [-y]" << endl
          <<    "-y: Do not ask before renaming a file (good for batches)"
          << endl;
