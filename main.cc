@@ -17,8 +17,13 @@ using std::endl;
 using std::ifstream;
 using std::string;
 
+// Version 0.1
+static const int ver_major = 0;
+static const int ver_minor = 1; 
+
 static void usage(const char *execname)
 {
+    cout << "pdfrenamer v" << ver_major << "." << ver_minor << endl;
     cout << "Usage: " << execname << " [file.pdf ...] [-y]" << endl
          <<    "-y: Do not ask before renaming a file (good for batches)"
          << endl;
