@@ -1,0 +1,46 @@
+pdfrenamer
+-------
+pdfrenamer is a simple utility to rename a PDF to the first line in the file.
+If the first line in the file, presumably the "title" of the document, has
+spaces, they are replaced with the '_' character.
+
+What is this good for?  Personally, I think it is pretty common that
+people maintain directories of poorly named PDF documents.  While this tool
+isn't perfect, it can help eliminate some of the naming confusion and make files
+have a clearer name.
+
+
+Usage
+-----
+Simply run the tool and give it a list of files to rename.
+        ./pdfrenamer crappy_name.pdf not_a_good_documentname.pdf blarg.pdf
+
+The tool will query the user with a (hopefully) better name for the PDF file.
+If the user likes the name, the file will be renamed to the suggested name.  If
+the user provides a '-y' on the command line, then the tool will not ask the
+user if it can rename the file, and will automatically rename instead.
+
+Caveat
+------
+This is not perfect.
+
+
+Dependencies
+------------
+libpoppler (PDF text extraction)
+
+
+Building
+--------
+Simply run `make' which will produce (hopefully) the `pdfrenamer' binary.
+
+
+Installation
+------------
+The file can be copied anywhere, spread the magic. 
+
+
+Contact
+-------
+Matt Davis (enferex)
+mattdavis9@gmail.com
